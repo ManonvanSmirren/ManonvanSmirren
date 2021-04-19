@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @ManonvanSmirren
-- 👀 I’m interested in walking
 - 🌱 I’m currently learning Data Analytics..
 - 💞️ I’m looking to collaborate on this course..
 
