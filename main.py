@@ -8,38 +8,40 @@ __human_name__ = 'strings'
 scorer_1 = "Ruud Gullit"
 scorer_2 = "Marco van Basten"
 #minutes of the goals
-goal_0 = 32
-goal_1 = 54
-scorers = (scorer_1 + " " + str(goal_0) + ', ' + scorer_2 + " " + str(goal_1))
+goal_1 = 32
+goal_2 = 54
+scorers = (scorer_1 + " " + str(goal_1) + ', ' + scorer_2 + " " + str(goal_2))
 print (scorers)
-report = (scorer_1 + " scored in the " + str(goal_0) + "nd minute" "\n"+ 
-scorer_2 + " scored in the " + str(goal_1) + "th minute")
+
+report = f"{scorer_1} scored in the {goal_1}nd minute \n{scorer_2} scored in the {goal_2}th minute"
 print (report)
 
 #part 2 of the exercise
 player = "Oleksandr Zavarov"
-first_name = player [:9]
-last_name = player [-7:]
-#lenght of the lastname
-last_name_len = len(last_name)
-print (last_name_len)
+
+len_first_name = (player.find(' '))
+# print (len_first_name) only for checking
+
+first_name = player [:len_first_name]
+print (first_name)
+
+len_last_name = len(player[(player.find(' ') +1):])
+# print (len_last_name)only for checking
+
+last_name = player [-len_last_name:]
+print (last_name)
+
 #Shortname of player_1
 name_short = (player [:1] + '.' + ' ' + last_name)
 print (name_short)
 
-# Ik weet dat ik onderstaande niet helemaal goed heb,
-# maar ik heb vanmiddag om 12.34 een vraag gesteld en geen antwoord gekregen
-# ga hem nu toch inleveren, anders kan ik (het hele weekend) niet verder
-# het lukt me niet om de laatste spatie met de 'inequality operator' op te lossen
-# Ik had hier graag advies in gehad.
-
 #chant
-chant = (last_name_len * (first_name + "!"+" "))
+chant = (len_last_name * (first_name + "!"+" ")[:-1])
 print (chant)
 
-#  good_chant
-good_chant = chant
-print (good_chant)
+# check laatste position chant, mag geen spatie zijn
+good_chant = chant[-1]
+print (good_chant != " ")
 
 
 
